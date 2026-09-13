@@ -1,4 +1,3 @@
-streamlit
-tensorflow
-pillow
-numpy
+requirements = "streamlit\ntensorflow-cpu\npillow\nnumpy\n"
+with open("Summer-Internship-Project/requirements.txt", "w") as f:
+    f.write(requirements)
