@@ -24,7 +24,7 @@ uploaded_file = st.file_uploader("Choose an image", type=["jpg", "jpeg", "png"])
 if uploaded_file is not None:
     try:
         img = Image.open(uploaded_file).convert("RGB").resize((100, 100))
-        st.image(img, caption="Uploaded Image", use_column_width=True)
+           st.image(img, caption="Uploaded Image", use_container_width=True)
 
         img_array = np.expand_dims(np.array(img) / 255.0, axis=0)
         pred = model.predict(img_array, verbose=0)
